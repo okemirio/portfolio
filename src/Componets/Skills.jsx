@@ -6,7 +6,7 @@ import meter5 from "../assets/images/tailwind.png";
 import meter6 from "../assets/images/typescript.png";
 import meter7 from "../assets/images/mongodb.png";
 import meter8 from "../assets/images/html.png";
-import meter9 from "../assets/images/CSS.png";
+import meter9 from "../assets/images/css.png";
 import meter10 from "../assets/images/mysql.png";
 
 import Carousel from "react-multi-carousel";
