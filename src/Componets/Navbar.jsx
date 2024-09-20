@@ -29,7 +29,7 @@ const Navbar = () => {
     <BootstrapNavbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <BootstrapNavbar.Brand href="#home">
-          <img src={Logo} alt="Logo" />
+          {/* <img src={Logo} alt="Logo" /> */}
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
