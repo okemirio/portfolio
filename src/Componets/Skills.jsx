@@ -8,6 +8,13 @@ import meter7 from "../assets/images/mongodb.png";
 import meter8 from "../assets/images/html.png";
 import meter9 from "../assets/images/css.png";
 import meter10 from "../assets/images/mysql.png";
+import selenium from "../assets/images/selenium.png";
+import meter11 from "../assets/images/cypress.png";
+import meter12 from "../assets/images/tre.png";
+import meter13 from "../assets/images/Jmeter.png";
+import meter14 from "../assets/images/playwright.png";
+import meter15 from "../assets/images/hp.png";
+import meter16 from "../assets/images/testng.png";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -44,14 +51,18 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                As a dedicated full-stack developer, I possess a diverse skill
-                set that spans both frontend and backend technologies. My
-                expertise allows me to create seamless, high-performance web
-                applications from start to finish. Whether it's designing
-                intuitive user interfaces or developing robust server-side
-                logic, I bring a comprehensive approach to every project. <br /> <br /> Here’s
-                a detailed look at the technical skills that I leverage to build
-                innovative solutions:
+                Here’s a refined version that includes your testing
+                capabilities: As a dedicated full-stack developer, I possess a
+                diverse skill set that spans frontend, backend, and software
+                testing technologies. My expertise allows me to create seamless,
+                high-performance web applications from start to finish. Whether
+                it's designing intuitive user interfaces, developing robust
+                server-side logic, or ensuring software reliability through
+                testing, I bring a comprehensive approach to every project.
+                <br />
+                <br />
+                Here’s a detailed look at the technical skills I leverage to
+                build and test innovative solutions:
               </p>
               <Carousel
                 responsive={responsive}
@@ -97,6 +108,42 @@ export const Skills = () => {
                 <div className="item">
                   <img src={meter10} alt="Image" />
                   <h5>My SQL</h5>
+                </div>
+                <div className="item">
+                  <img src={selenium} alt="Image" />
+                  <h5>Selenium</h5>
+                </div>
+                <div className="item">
+                  <img src={meter11} alt="Image" />
+                  <h5>Selenium</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={meter12}
+                    alt="Image"
+                    style={{ width: "140px", height: "145px" }}
+                  />
+                  <h5>Trello</h5>
+                </div>
+                <div className="item">
+                  <img src={meter13} alt="Image" />
+                  <h5>Apache Jmeter</h5>
+                </div>
+                <div className="item">
+                  <img src={meter14} alt="Image" />
+                  <h5>Playwright</h5>
+                </div>
+                <div className="item">
+                  <img src={meter15} alt="Image" />
+                  <h5>HP load runner</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={meter16}
+                    alt="Image"
+                    style={{ width: "130px", height: "145px" }}
+                  />
+                  <h5>TestNG</h5>
                 </div>
               </Carousel>
             </div>
