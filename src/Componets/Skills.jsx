@@ -14,7 +14,7 @@ import meter12 from "../assets/images/tre.png";
 import meter13 from "../assets/images/Jmeter.png";
 import meter14 from "../assets/images/playwright.png";
 import meter15 from "../assets/images/hp.png";
-import meter16 from "../assets/images/testng.png";
+import meter16 from "../assets/images/test.png";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

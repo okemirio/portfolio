@@ -3,7 +3,6 @@ import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/images/Bookly.jpg";
 import projImg2 from "../assets/images/Budget.jpg";
 import projImg3 from "../assets/images/port.jpg";
-
 import colorSharp2 from "../assets/images/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -16,22 +15,24 @@ const Projects = () => {
       imgUrl: projImg1,
       githubLink: "https://github.com/okemirio/Bookkapp-Backend",
       projectUrl: "https://bookstore-alpha-silk.vercel.app/",
+      category: "ecommerce",
     },
     {
-      title: " A BUDGET APP",
-      description: " A budget and expense calculator",
+      title: "A BUDGET APP",
+      description: "A budget and expense calculator",
       imgUrl: projImg2,
       githubLink: "https://github.com/okemirio/BudgetApp",
       projectUrl: "https://budget-app-zeta-orpin.vercel.app/",
+      category: "budget",
     },
-       {
-        title: "My Portfolio",
-        description: "Personal portfolio showcasing my work",
-        imgUrl: projImg3, // Add an image for your portfolio
-        githubLink: "https://github.com/your-username/portfolio-repo", // Optional: add a GitHub link if it's public
-        projectUrl: "https://your-portfolio-url.com", // Link to your portfolio
-      },
-    // Add more projects as needed
+    {
+      title: "My Portfolio",
+      description: "Personal portfolio showcasing my work",
+      imgUrl: projImg3,
+      githubLink: "https://github.com/your-username/portfolio-repo",
+      projectUrl: "https://your-portfolio-url.com",
+      category: "portfolio",
+    },
   ];
 
   return (
@@ -41,75 +42,40 @@ const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Projects</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav
-                      variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
-                      id="pills-tab"
-                    >
+                  <p>Explore my latest projects, including an e-commerce store, a budget app, and my personal portfolio.</p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="ecommerce">
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="ecommerce">E-commerce</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="budget">Budget App</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="portfolio">Portfolio</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    <Tab.Content
-                      id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
-                    >
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                title={project.title}
-                                description={project.description}
-                                imgUrl={project.imgUrl}
-                                githubLink={project.githubLink} // Pass the GitHub link
-                                projectUrl={project.projectUrl} // Pass the project URL
-                              />
-                            );
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
-                      </Tab.Pane>
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      {["ecommerce", "budget", "portfolio"].map((category, idx) => (
+                        <Tab.Pane eventKey={category} key={idx}>
+                          <Row>
+                            {projects
+                              .filter((project) => project.category === category)
+                              .map((project, index) => (
+                                <ProjectCard
+                                  key={index}
+                                  title={project.title}
+                                  description={project.description}
+                                  imgUrl={project.imgUrl}
+                                  githubLink={project.githubLink}
+                                  projectUrl={project.projectUrl}
+                                />
+                              ))}
+                          </Row>
+                        </Tab.Pane>
+                      ))}
                     </Tab.Content>
                   </Tab.Container>
                 </div>
@@ -118,7 +84,7 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="Background" />
     </section>
   );
 };

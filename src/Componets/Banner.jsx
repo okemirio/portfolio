@@ -4,8 +4,8 @@ import HeaderImg from "../assets/images/kachi2.jpg";
 import { Container, Col, Row } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import '../../src/App.css';
- 
+import "../../src/App.css";
+
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -75,16 +75,18 @@ const Banner = () => {
                   </h1>
 
                   <p>
-                    With a passion for crafting high-quality, scalable web
-                    applications. With a strong foundation in both frontend and
-                    backend technologies, I excel at building seamless user
-                    experiences and robust server-side solutions. <br />
-                    <br /> My dual expertise in development and quality
-                    assurance ensures that I deliver not only functional but
-                    also reliable and efficient software. Driven by a commitment
-                    to excellence, I leverage my diverse skill set to tackle
-                    complex challenges and enhance the performance and usability
-                    of every project I undertake.
+                    As a full-stack developer and software tester, I specialize
+                    in crafting seamless user experiences and building robust
+                    server-side solutions. With a strong foundation in both
+                    frontend and backend technologies, I ensure that
+                    applications are not only functional but also optimized for
+                    performance and reliability. <br /> <br /> My expertise in software
+                    testing and quality assurance enables me to identify and
+                    resolve issues proactively, ensuring that every project
+                    meets the highest standards of efficiency and usability.
+                    Passionate about innovation and problem-solving, I thrive on
+                    delivering high-quality solutions that enhance user
+                    engagement and system integrity.
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />

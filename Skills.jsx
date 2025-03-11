@@ -12,9 +12,9 @@ import selenium from "../assets/images/selenium.png";
 import meter11 from "../assets/images/cypress.png";
 import meter12 from "../assets/images/tre.png";
 import meter13 from "../assets/images/Jmeter.png";
-import meter14 from "../assets/images/playwright.png";
-import meter15 from "../assets/images/hp.png";
-import meter16 from "../assets/images/testng.png";
+// import meter14 from "../assets/images/playwright.png";
+// import meter15 from "../assets/images/hp.png";
+// import meter16 from "../assets/images/test.png";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -129,7 +129,7 @@ export const Skills = () => {
                   <img src={meter13} alt="Image" />
                   <h5>Apache Jmeter</h5>
                 </div>
-                <div className="item">
+                {/* <div className="item">
                   <img src={meter14} alt="Image" />
                   <h5>Playwright</h5>
                 </div>
@@ -144,7 +144,7 @@ export const Skills = () => {
                     style={{ width: "130px", height: "145px" }}
                   />
                   <h5>TestNG</h5>
-                </div>
+                </div> */}
               </Carousel>
             </div>
           </div>
